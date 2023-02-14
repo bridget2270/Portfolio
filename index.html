@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bridget's Portfolio</title>    
+        <link rel="stylesheet" href="stylesheet.css">
+        
+    </head>
+    <body>
+      <div id="header">
+        <div class="container">
+          <nav><!------------Still working on implementing this part------------>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <!-----<li><a href="#">About Me</a></li>---->
+             <!----<li><a href="#">Projects</a></li>---->
+              <!---<li><a href="#">Contact</a></li>--->
+            </ul>
+          </nav>
+          <div class="header-text">
+            <p>Software Developer</p>
+            <h1>Hi, I'm <span>Bridget</span><br>Welcome to my Portfolio</h1><br>
+          </div>
+      </div>
+    </div>
+          <!------------------about section---------------->
+        <div id="about">
+            <div class="container">
+              <div class="row">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/65KP_gS7IOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="about1">
+                  <img src="https://media.licdn.com/dms/image/C4D03AQH6NgcZj7freQ/profile-displayphoto-shrink_400_400/0/1592411360511?e=1679529600&v=beta&t=8h_TZkO51jIS5muj3VWnPvLWIOwsm9wBi7Mn_C_FB9U">
+                </div>
+                <div class="about2">
+                  <h1 class="sub-title">About Me</h1>
+                  <div class="aboutMeParagraph">
+                    <p>I'm from Illinois but am currently located in Milwaukee, Wisconsin. I'm learning software development (JS MERN stack) through a bootcamp at MIT.</p> <br>
+                  </div>  
+              </div>
+                    
+                    <!--this is will be implemented later on-->
+                    <!---<div class="tab-titles"></div>--->
+                     <!--  <p class="tab-links active-link" on click="opentab('skills')">Skills</p> --> 
+                     <!-- <p class="tab-links" on click="opentab('experience')">Experience</p> --> 
+                     <!-- <p class="tab-links" on click="opentab('education')">Education</p>  -->
+  
+              </div>
+              <div class="tab-contents active-tab" id="section1">
+                <ul>
+                  <li><span>Education</span><br> B.A Criminology & Law Studies, Minors in Biological Sciences and Arabic Language (Marquette University)</li>
+                  <li><span>Languages</span><br>English (Fluent), Spanish (Fluent), Formal Arabic (Intermediate), Korean (Beginner- reading and writing)</li>
+                  <li><span>Programming Languages</span><br>Javascript, CSS, HTML</li><br><br>
+                </ul>
+              </div>
+              <div class="tab-contents">
+                <ul>
+                  <div class="experience">
+                  <u><h1>Work Experience</h1></u>
+                  <div class="companies">
+                  <li><span>Senior Research Analyst (2022-present)</span><br></li>
+                  <li>Expert Institute</li>
+                  <li><span>Research Analyst (2021-2022)</span></li>
+                  <li>Expert Institute</li> <br> <br>
+                </ul>
+              </div>
+                <div class ="projects-text">
+                  <u><h2> Projects</h2></u><br> 
+                  <div class="project-links">
+                      <li><a href="https://bridget2270.github.io/pacmenfactory/" target="_blank">PacMen Factory</a></li>
+                        <small>This project allows one to create pacman icons on the page by clicking the "add pacman" button. Then the user may click the "start game" button which will make the pacmen start moving across the screen at a random speed. When a pacman encounteres the edge of the screen it will bounce off.</small> <br> <br>
+                          <img src="PacMenFactoryPicture.png" width="250" height="150"><br><br>
+             
+                      <li><a href="https://bridget2270.github.io/movingeyes/" target="_blank">Moving Eyes</a></li>
+                          <small> In this project a pair of eyes appear. As the user moves their cursor along the page the "pupils" of the eyes will follow.</small> <br><br>
+                          <img src="MovingEyesPicture.png" width="300" height="200" <br><br>
+                      <li><a href="https://bridget2270.github.io/bus_tracker/" target="_blank">Bus Tracker</a></li> <br>
+                        <small>This project allows the user to track buses going between MIT and Harvard.</small> <br><br>
+                        <img src="BusTrackerProject.jpg" width="450" height="230">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+          <div id="contactsection">
+            <div class="container">
+             <u><h3>Contact</h3></u>
+               <ul>
+                  <li><a href="https://www.linkedin.com/in/bridget-montes-11b334190" target="_blank">LinkedIn</a></li>
+                  <li><a href="https://github.com/bridget2270" target="_blank">GitHub</a></li><br>
+                </ul> 
+           </div>          
+         </div>
+          
+
+         
+        <script> <!--------Working in progress----->
+          var tablinks= document.getElementByClassName("tab-links");
+          var tabcontents= document.getElementByClassName("tab-contents");
+          function opentab(tabname){
+            for(tablink of tablinks){
+              tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+              tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+          }    
+        </script>
+</html>
